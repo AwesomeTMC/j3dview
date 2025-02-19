@@ -334,7 +334,7 @@ class Packet:
         self.chanctrl[i][2:6] = mode.light_mask
         self.chanctrl[i][6:7] = mode.ambient_source
         self.chanctrl[i][7:9] = mode.diffuse_function if mode.attenuation_function != gx.AF_SPEC else gx.DF_NONE
-        self.chanctrl[i][9] = mode.attenuation_function != gx.AF_NONE
+        self.chanctrl[i][9] = mode.attenuation_function != gx.AF_NONE_2
         self.chanctrl[i][10] = mode.attenuation_function != gx.AF_SPEC
         self.chanctrl[i][11:15] = mode.light_mask >> 4
 

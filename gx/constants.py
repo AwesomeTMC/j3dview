@@ -273,11 +273,13 @@ class AttenuationFunction(Enum):
     AF_SPEC = 0
     AF_SPOT = 1
     AF_NONE = 2
+    AF_NONE_2 = 3
 
 
 AF_SPEC = AttenuationFunction.AF_SPEC
 AF_SPOT = AttenuationFunction.AF_SPOT
 AF_NONE = AttenuationFunction.AF_NONE
+AF_NONE_2 = AttenuationFunction.AF_NONE_2
 
 
 class TexCoord(Enum):

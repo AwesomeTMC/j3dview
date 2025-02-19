@@ -117,7 +117,7 @@ class ViewerWidget(gl.ResourceManagerMixin, QtWidgets.QOpenGLWidget):
         self.projection_matrix_need_update = True
         self.view_matrix_need_update = True
 
-        self.animation_timer.start(1000/self.fps)
+        self.animation_timer.start(int(1000/self.fps))
 
         self.context().aboutToBeDestroyed.connect(self.gl_delete)
 

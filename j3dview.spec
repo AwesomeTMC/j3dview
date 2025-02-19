@@ -3,20 +3,19 @@
 block_cipher = None
 
 ui_files = ('widgets/*.ui','widgets')
+py_files = ('widgets/*.py','widgets')
 
 excludes = [
         'bz2',
         'lzma',
-        'select',
-        'socket',
         'ssl',
-        'numpy.distutils', # Needs to be excluded for socket and select to be excluded
+        'numpy.distutils',
         'PyQt5.QtPrintSupport']
 
 analysis = Analysis(
         ['j3dview.py'],
         binaries=None,
-        datas=[ui_files],
+        datas=[ui_files, py_files],
         hiddenimports=[],
         hookspath=[],
         runtime_hooks=[],
