@@ -224,5 +224,5 @@ class Texture(WrapperModel):
 
     def save(self, file_path):
         with open(file_path, 'wb') as stream:
-            gx.bti.pack(stream, self.viewed_object)
+            gx.bti.pack(stream, self.wrapped_object)
 

@@ -89,7 +89,7 @@ def gl_convert_array(source):
     if source is None:
         return None
 
-    destination = numpy.asfarray(source,numpy.float32)
+    destination = numpy.asarray(source,dtype=numpy.float32)
 
     if source.component_type != gx.F32 and source.scale_exponent != 0:
         destination *= 2**(-source.scale_exponent)
@@ -143,13 +143,13 @@ def gl_convert_color_array(source):
 class SceneGraphNode(WrapperModel):
 
     @staticmethod
-    def create_node(viewed_object):
-        if viewed_object.node_type == NodeType.JOINT:
-            return JointNode(viewed_object)
-        if viewed_object.node_type == NodeType.MATERIAL:
-            return MaterialNode(viewed_object)
-        if viewed_object.node_type == NodeType.SHAPE:
-            return ShapeNode(viewed_object)
+    def create_node(wrapped_object):
+        if wrapped_object.node_type == NodeType.JOINT:
+            return JointNode(wrapped_object)
+        if wrapped_object.node_type == NodeType.MATERIAL:
+            return MaterialNode(wrapped_object)
+        if wrapped_object.node_type == NodeType.SHAPE:
+            return ShapeNode(wrapped_object)
         assert False
 
     def all_descendants(self):

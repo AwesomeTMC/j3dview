@@ -126,7 +126,7 @@ cdef packed struct dxt1_block_t:
 
 
 def reinterpret_native_endian(array):
-    return array.newbyteorder('=')
+    return array.view(array.dtype.newbyteorder('='))
 
 
 def reinterpret_elements(array, element_type, base_dimension):

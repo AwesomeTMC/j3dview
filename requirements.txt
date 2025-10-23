@@ -1,0 +1,5 @@
+numpy
+PyOpenGL
+PyQt5
+pyinstaller
+Cython
