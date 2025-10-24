@@ -1,5 +1,6 @@
 numpy
 PyOpenGL
-PyQt5
+PyQt5==5.15.10
+PyQt5-sip==12.13.0
 pyinstaller
 Cython

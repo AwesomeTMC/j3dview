@@ -16,7 +16,11 @@ analysis = Analysis(
         ['j3dview.py'],
         binaries=None,
         datas=[ui_files, py_files],
-        hiddenimports=[],
+        hiddenimports=[
+            'OpenGL.platform.egl',
+            'OpenGL.platform.glx',
+            'OpenGL.platform.win32'
+        ],
         hookspath=[],
         runtime_hooks=[],
         excludes=excludes,
