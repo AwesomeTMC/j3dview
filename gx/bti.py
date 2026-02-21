@@ -22,7 +22,7 @@ class Texture(Struct):
     wrap_s = EnumConverter(uint8, gx.WrapMode)
     wrap_t = EnumConverter(uint8, gx.WrapMode)
     unknown1 = uint8
-    palette_format = EnumConverter(uint8, gx.PaletteFormat)
+    palette_format = EnumConverter(uint8, gx.PaletteFormat, default=gx.PaletteFormat.TL_IA8)
     palette_entry_count = uint16
     palette_offset = uint32
     use_mipmapping = bool8
